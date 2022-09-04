@@ -1,0 +1,67 @@
+{
+	"INFORMATIE": "pas in deze config de gegevens aan die voor jouw gelden",
+    "obs": {
+        "ip": "localhost:4444",
+        "password": "WEBSOCKET WACHTWOORD",
+        "normalScene": "IRL",
+        "offlineScene": "storing",
+        "lowBitrateScene": "storing",
+        "refreshScene": "REFRESH",
+        "lowBitrateTrigger": 100,
+        "highRttTrigger": 2500,
+        "refreshSceneInterval": 10000,
+        "requestMs": 2000,
+        "onlySwitchWhenStreaming": false
+    },
+    "rtmp": {
+        "server": "nginx",
+        "stats": "http://GEBRUIKERSNAAM:WACHTWOORD@IPofURL:POORT/stat",
+        "application": "HIER JE STREAM NAAM",
+        "key": "HIER JE STREAM KEY"
+    },
+    "twitchChat": {
+        "channel": "HIER JE KANAALNAAM",
+        "botUsername": "HIER DE BOT USERNAME ID",
+        "oauth": "HIER DE OAUTH TOKEN VOOR JE BOT",
+        "enable": true,
+        "prefix": "!",
+        "enablePublicCommands": false,
+        "publicCommands": [
+            "bitrate"
+        ],
+        "enableModCommands": true,
+        "modCommands": [
+            "refresh",
+            "fix",
+            "trigger",
+            "sourceinfo",
+            "obsinfo",
+            "bitrate"
+        ],
+        "enableAutoSwitchNotification": true,
+        "enableAutoStopStreamOnHostOrRaid": true,
+        "adminUsers": [
+            "92060355",
+            "b3ck"
+        ],
+        "alias": [
+            [
+                "r",
+                "refresh"
+            ],
+            [
+                "f",
+                "fix"
+            ],
+            [
+                "b",
+                "bitrate"
+            ],
+            [
+                "si",
+                "sourceinfo"
+            ]
+        ]
+    },
+    "language": "nl"
+}

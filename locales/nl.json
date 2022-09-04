@@ -1,0 +1,64 @@
+{
+    "start": {
+        "success": "Stream is gestart",
+        "error": "Error: {error}"
+    },
+    "stop": {
+        "success": "Stream is gestopt",
+        "error": "Error: {error}"
+    },
+    "switch": {
+        "success": "Scene gewijzigd naar \"{scene}\"",
+        "error": "Geen scene opgegeven"
+    },
+    "bitrate": {
+        "success": "Huidige bitrate: {bitrate} Kbps",
+        "error": "Huidige bitrate: offline"
+    },
+    "refresh": {
+        "success": "Refreshing stream",
+        "error": "Error refreshing stream",
+        "done": "Stream refresh uitgevoerd"
+    },
+    "trigger": {
+        "success": "Trigger is ingesteld op {number} Kbps",
+        "error": "Fout tijdens veranderen van trigger. {number} is geen correcte ingaven.",
+        "current": "Huidige trigger is {number} Kbps"
+    },
+    "sourceinfo": {
+        "success": "[SRC] R: {height} | F: {fps} | B: {bitrate}",
+        "error": "[SRC] offline"
+    },
+    "obsinfo": {
+        "success": "[OBS] S: {currentScene} | F: {fps} | B: {bitrate}",
+        "error": "[OBS] offline"
+    },
+    "rec": {
+        "started": "gestart",
+        "stopped": "gestopt",
+        "invalid": "Geen optie",
+        "error": "al aan het {option}"
+    },
+    "fix": {
+        "try": "Proberen de stream te fixen...",
+        "success": "Stream successvol gefixed!",
+        "error": "Er ging iets mis tijdens het fixen!"
+    },
+    "alias": {
+        "success": "Voegde \"{alias}\"",
+        "error": "Error \"{command}\" bestaat niet",
+        "removed": "Verwijderde \"{alias}\""
+    },
+    "sceneSwitch": {
+        "switch": "Scene gewijzigd naar \"{scene}\""
+    },
+    "handleCommands": {
+        "public": "Public comands",
+        "mod": "Mod commands",
+        "notify": "Auto switch notification",
+        "autostop": "Auto stop stream",
+        "enabled": "enabled",
+        "disabled": "disabled",
+        "already": "already"
+    }
+}

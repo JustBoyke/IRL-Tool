@@ -1,7 +1,7 @@
 {
     "name": "IRL-Tool",
     "version": "1.2.0",
-    "description": "Simple app to automatically switch scenes based on the current bitrate on the nginx stats page.",
+    "description": "Simple app to automatically switch scenes based on the current bitrate recieved from the nginx stats page.",
     "main": "lib/app",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",

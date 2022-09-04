@@ -13,6 +13,7 @@
     "license": "GNU GENERAL PUBLIC LICENSE",
     "dependencies": {
         "fast-fuzzy": "^1.8.4",
+        "minimist": "^1.2.6",
         "node-fetch": "^2.6.7",
         "node-media-server": "^2.4.7",
         "obs-websocket-js": "^1.2.0",

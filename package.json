@@ -1,0 +1,31 @@
+{
+    "name": "IRL-Tool",
+    "version": "1.2.0",
+    "description": "Simple app to automatically switch scenes based on the current bitrate on the nginx stats page.",
+    "main": "lib/app",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node ./lib/app",
+        "build": "babel src -d lib",
+        "dev": "nodemon --exec babel-node ./src/app.js"
+    },
+    "author": "JustBoyke",
+    "license": "GNU GENERAL PUBLIC LICENSE",
+    "dependencies": {
+        "fast-fuzzy": "^1.8.4",
+        "node-fetch": "^2.6.7",
+        "node-media-server": "^2.4.7",
+        "obs-websocket-js": "^1.2.0",
+        "signale": "^1.3.0",
+        "string-template": "^1.0.0",
+        "ws": "^6.2.2",
+        "xml2js": "^0.4.19"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/node": "^7.2.2",
+        "@babel/preset-env": "^7.2.3",
+        "nodemon": "^2.0.19"
+    }
+}

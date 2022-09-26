@@ -1,68 +1,103 @@
 {
-	"INFORMATIE": "pas in deze config de gegevens aan die voor jouw gelden",
-    "obs": {
-        "ip": "localhost:4444",
-        "password": "WEBSOCKET WACHTWOORD",
-        "normalScene": "IRL",
-        "offlineScene": "storing",
-        "lowBitrateScene": "storing",
-        "refreshScene": "REFRESH",
-        "lowBitrateTrigger": 100,
-        "highRttTrigger": 2500,
-        "refreshSceneInterval": 10000,
-        "requestMs": 2000,
-        "onlySwitchWhenStreaming": false
+    "INFORMATIE": "pas in deze config de gegevens aan die voor jouw gelden vergeet niet je Oauth token in de .env te zetten",
+    "user": {
+      "id": null,
+      "name": "gewoonboyke",
+      "passwordHash": null
     },
-    "rtmp": {
-        "server": "nginx",
-        "stats": "http://GEBRUIKERSNAAM:WACHTWOORD@IPofURL:POORT/stat",
-        "application": "HIER JE STREAM NAAM",
-        "key": "HIER JE STREAM KEY"
+    "switcher": {
+      "bitrateSwitcherEnabled": true,
+      "onlySwitchWhenStreaming": true,
+      "instantlySwitchOnRecover": true,
+      "autoSwitchNotification": true,
+      "retryAttempts": 5,
+      "triggers": {
+        "low": 100,
+        "rtt": 2500,
+        "offline": null
+      },
+      "switchingScenes": {
+        "normal": "IRL",
+        "low": "storing",
+        "offline": "storing"
+      },
+      "streamServers": [
+        {
+          "streamServer": {
+            "type": "Nginx",
+            "statsUrl": "http://GEBRUIKERSNAAM:WACHTWOORD@IPofURL:POORT/stat",
+            "application": "HIER JE STREAM NAAM",
+            "key": "HIER JE STREAM KEY"
+          },
+          "name": "nginx",
+          "priority": 1,
+          "overrideScenes": {
+            "normal": "IRL",
+            "low": "storing",
+            "offline": "storing"
+          },
+          "dependsOn": null,
+          "enabled": true
+        }
+      ]
     },
-    "twitchChat": {
-        "channel": "HIER JE KANAALNAAM",
-        "botUsername": "HIER DE BOT USERNAME ID",
-        "oauth": "HIER DE OAUTH TOKEN VOOR JE BOT",
-        "enable": true,
-        "prefix": "!",
-        "enablePublicCommands": false,
-        "publicCommands": [
-            "bitrate"
-        ],
-        "enableModCommands": true,
-        "modCommands": [
-            "refresh",
-            "fix",
-            "trigger",
-            "sourceinfo",
-            "obsinfo",
-			"switch",
-            "bitrate"
-        ],
-        "enableAutoSwitchNotification": true,
-        "enableAutoStopStreamOnHostOrRaid": true,
-        "adminUsers": [
-            "92060355",
-            "b3ck"
-        ],
-        "alias": [
-            [
-                "r",
-                "refresh"
-            ],
-            [
-                "f",
-                "fix"
-            ],
-            [
-                "b",
-                "bitrate"
-            ],
-            [
-                "si",
-                "sourceinfo"
+    "software": {
+      "type": "Obs",
+      "host": "localhost",
+      "password": "WEBSOCKET WACHTWOORD",
+      "port": 4444
+    },
+    "chat": {
+      "platform": "Twitch",
+      "username": "HIER DE BOT USERNAME ID",
+      "admins": [
+        "92060355",
+        "b3ck"
+      ],
+      "prefix": "!",
+      "enablePublicCommands": false,
+      "enableModCommands": true,
+      "enableAutoStopStreamOnHostOrRaid": true,
+      "commands": {
+        "Fix": {
+          "permission": "Mod",
+          "alias": [
+            "f"
+          ]
+        },
+        "Switch": {
+          "permission": "Mod",
+          "alias": [
+            "ss"
+          ]
+        },
+        "Bitrate": {
+          "permission": "Mod",
+          "alias": [
+            "b"
+          ]
+        },
+        "Sourceinfo": {
+            "permission": "Mod",
+            "alias": [
+              "bsi"
             ]
-        ]
+          }
+      }
     },
-    "language": "nl"
-}
+    "optionalScenes": {
+      "starting": null,
+      "ending": null,
+      "privacy": "privacy",
+      "refresh": null
+    },
+    "optionalOptions": {
+      "twitchTranscodingCheck": false,
+      "twitchTranscodingRetries": 5,
+      "twitchTranscodingDelaySeconds": 15,
+      "offlineTimeout": null,
+      "recordWhileStreaming": false
+    },
+    "language": "en"
+  }
+  
